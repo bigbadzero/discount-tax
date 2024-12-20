@@ -3,7 +3,7 @@ name: GitHub Deploy
 on:
   push:
     branches:
-      - master  # Trigger workflow when pushing to the master branch
+      - master  # Adjust if your default branch is not 'master'
 
 jobs:
   build-and-deploy:
@@ -16,13 +16,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18  # Ensure Node.js 18 or higher is used
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install dependencies with Yarn
+        run: yarn install  # Use Yarn instead of npm
 
       - name: Build Gatsby site
-        run: npm run build
+        run: yarn build  # Build the site using Yarn
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
