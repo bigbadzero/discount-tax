@@ -6,20 +6,47 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier:fix": "prettier './src/**/*.{tsx,ts}' --write",
+    "eslint:fix": "eslint ./src --fix",
+    "codeStyle:fix": "yarn prettier:fix && yarn eslint:fix",
+    "clear-all": "rimraf ./node_modules ./.next"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.1.3"
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.13.3",
+    "@emotion/server": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^6.1.1",
+    "@mui/material": "^6.1.1",
+    "aos": "^2.3.4",
+    "card-validator": "^10.0.0",
+    "formik": "^2.4.5",
+    "jarallax": "^2.1.4",
+    "next": "15.1.3",
+    "react": "^18.2.0",
+    "react-countup": "^6.5.0",
+    "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.14.1",
+    "react-slick": "^0.30.2",
+    "react-syntax-highlighter": "^15.5.0",
+    "react-visibility-sensor": "^5.1.1",
+    "slick-carousel": "^1.8.1",
+    "yup": "^1.3.2"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.1.3",
-    "@eslint/eslintrc": "^3"
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-slick": "^0.23.13",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "cross-env": "^7.0.3",
+    "patch-package": "^8.0.0",
+    "prettier": "^3.1.1",
+    "rimraf": "^6.0.1",
+    "typescript": "^5"
   }
 }
